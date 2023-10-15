@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_icon_main"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_icon_main_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DataVault"
+        tools:targetApi="31">
+        <activity
+            android:name=".UpdateActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DataVault"/>
+        <activity
+            android:name=".AddActivity"
+            android:exported="true"
+            android:label="Customer Details"
+            android:theme="@style/Theme.DataVault"/>
+        <!--
+             android:exported="true" means::: -> The android:exported attribute sets whether a component
+                (activity, service, broadcast receiver, etc.) can be launched by components of other
+                applications: If true , any app can access the activity and launch it by its exact class name
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="DataVault"
+            android:theme="@style/Theme.Material3.Light">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
